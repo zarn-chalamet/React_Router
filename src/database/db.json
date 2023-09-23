@@ -1,0 +1,22 @@
+{
+    "blogs" : [
+        {
+            "id" : 1,
+            "title" : "What is React JS",
+            "author" : "Zarn",
+            "body" : "The React.js framework is an open-source JavaScript framework and library developed by Facebook. It's used for building interactive user interfaces and web applications quickly and efficiently with significantly less code than you would with vanilla JavaScript. In React, you develop your applications by creating reusable components that you can think of as independent Lego blocks. These components are individual pieces of a final interface, which, when assembled, form the application's entire user interface."
+        },
+        {
+            "id" : 2,
+            "title" : "What is Laravel",
+            "author" : "Zarn",
+            "body" : "Laravel is an open-source PHP framework, which is robust and easy to understand. It follows a model-view-controller design pattern. Laravel reuses the existing components of different frameworks which helps in creating a web application. The web application thus designed is more structured and pragmatic. Laravel offers a rich set of functionalities which incorporates the basic features of PHP frameworks like CodeIgniter, Yii and other programming languages like Ruby on Rails. Laravel has a very rich set of features which will boost the speed of web development."
+        },
+        {
+            "id" : 3,
+            "title" : "What is Vue JS",
+            "author" : "Zarn",
+            "body" : "Vue.js (commonly referred to as Vue; pronounced view) is an open-source model view viewmodel front end JavaScript library for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members."
+        }
+    ]
+}

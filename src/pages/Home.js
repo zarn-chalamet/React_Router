@@ -1,17 +1,21 @@
+import useFetch from "../Hooks/useFetch";
+import "./Home.css";
+import { Link } from "react-router-dom";
 function Home() {
+  let url = "http://localhost:3001/blogs";
+  let { data: blogs, loading, error } = useFetch(url);
   return (
-    <div>
-      <h1>Home</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eleifend
-        quam vel mi iaculis porta. Donec eu iaculis elit. Aliquam eget sapien
-        tellus. Aenean quis lacus ac ante volutpat semper. Vestibulum fringilla
-        vitae ipsum ut dictum. Integer eget dignissim diam. Morbi at consequat
-        eros. Quisque eu dolor mauris. Pellentesque condimentum dui id augue
-        ornare convallis. Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit. Suspendisse suscipit ultricies elit, ut pulvinar neque facilisis
-        ut.
-      </p>
+    <div className="Home">
+      {error && <div>{error}</div>}
+      {loading && <div>Loading...</div>}
+      {blogs &&
+        blogs.map((blog) => (
+          <div key={blog.id} className="card">
+            <h3>{blog.title}</h3>
+            <p>posted by - {blog.author}</p>
+            <Link to={`/blogs/${blog.id}`}>Read more</Link>
+          </div>
+        ))}
     </div>
   );
 }
